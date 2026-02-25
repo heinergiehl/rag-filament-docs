@@ -191,7 +191,8 @@ If you need tenant isolation, you have two realistic options:
 ## Support & policies
 
 - Support: `webdevislife2021@gmail.com`
-- Release notes: `https://github.com/heinergiehl/rag-filament-docs/blob/main/RELEASE_NOTES_v1.0.0.md`
+- Release notes (latest): `https://github.com/heinergiehl/rag-filament-docs/blob/main/RELEASE_NOTES_v1.0.1.md`
+- Previous release notes: `https://github.com/heinergiehl/rag-filament-docs/blob/main/RELEASE_NOTES_v1.0.0.md`
 - Support policy: `https://github.com/heinergiehl/rag-filament-docs/blob/main/SUPPORT_POLICY.md`
 - Refund/license terms: `https://github.com/heinergiehl/rag-filament-docs/blob/main/REFUND_AND_LICENSE.md`
 - Security & privacy: `https://github.com/heinergiehl/rag-filament-docs/blob/main/SECURITY_AND_PRIVACY.md`

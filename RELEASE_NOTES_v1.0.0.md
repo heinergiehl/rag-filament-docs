@@ -2,7 +2,7 @@
 
 ## Summary
 
-`v1.0.0` is the first commercial-ready release of Filament RAG.
+`v1.0.0` is the first commercial-ready release of RAG Chatbot.
 It focuses on production stability, strict quality gates, and marketplace packaging for paid distribution.
 
 ## Highlights
