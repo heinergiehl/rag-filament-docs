@@ -7,6 +7,7 @@ Build, manage, and embed production-ready **RAG chatbots** directly from your Fi
 
 ## Table of contents
 
+- [Live demo](#live-demo)
 - [What you get](#what-you-get)
 - [Requirements](#requirements)
 - [Installation](#installation)
@@ -17,6 +18,11 @@ Build, manage, and embed production-ready **RAG chatbots** directly from your Fi
 - [Security & privacy](#security--privacy)
 - [Multi-tenancy](#multi-tenancy)
 - [Support & policies](#support--policies)
+
+## Live demo
+
+- [Public landing](https://rag-filament.heinerdevelops.tech/)
+- [Admin login](https://rag-filament.heinerdevelops.tech/admin/login)
 
 ## What you get
 
