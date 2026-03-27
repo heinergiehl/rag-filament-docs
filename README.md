@@ -4,6 +4,9 @@ Versioned documentation for the `heiner/filament-rag` plugin.
 
 This repo is meant to make it easy for both humans and the demo chatbot to point to the exact page for an important concept instead of sending people to a vague homepage.
 
+> [!NOTE]
+> For the Filament marketplace `docs_url`, use [`FILAMENT_PLUGIN_PAGE.md`](./FILAMENT_PLUGIN_PAGE.md), not this README. Filament renders one raw Markdown file and does not resolve repository-relative links the way GitHub does.
+
 ## Start Here
 
 - [Live demo](#live-demo)
