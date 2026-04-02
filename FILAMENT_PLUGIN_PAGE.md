@@ -4,8 +4,6 @@ Filament RAG is a production-focused Filament plugin for teams that want to buil
 
 It is designed for real product use inside Laravel + Filament: multiple bots, source ingestion, retrieval tuning, embeddable chat widgets, conversation history, and production controls in one place.
 
-This page is intended for the Filament marketplace `docs_url` field, so it uses direct public links that work outside GitHub.
-
 ## Live Demo
 
 - Landing page: https://filament-rag.heinerdevelops.tech/
