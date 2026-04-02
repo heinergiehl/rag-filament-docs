@@ -1,11 +1,6 @@
 # Bots
 
-This is the specific documentation page to share when someone asks:
-
-- what a bot is
-- how to create a chatbot in Filament RAG
-- what can be customized per bot
-- how public and internal bots differ
+Bots are the assistant definitions you manage inside Filament RAG. Each bot has its own prompt, model, retrieval settings, access rules, and widget branding, so one app can run several clearly separated chatbot experiences.
 
 ## Quick Summary
 

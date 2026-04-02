@@ -55,6 +55,7 @@ If you need one page with all public links, use [Reference Links](./REFERENCE_LI
 
 ### Release Notes
 
+- [Release Notes v1.2.0](./RELEASE_NOTES_v1.2.0.md)
 - [Release Notes v1.1.0](./RELEASE_NOTES_v1.1.0.md)
 - [Release Notes v1.0.1](./RELEASE_NOTES_v1.0.1.md)
 - [Release Notes v1.0.0](./RELEASE_NOTES_v1.0.0.md)
@@ -72,4 +73,4 @@ If you need one page with all public links, use [Reference Links](./REFERENCE_LI
 
 ## Versioning
 
-Docs should track plugin releases. If the plugin release is `1.1.0`, the matching docs snapshot should also be tagged `v1.1.0`.
+Docs should track plugin releases. If the plugin release is `1.2.0`, the matching docs snapshot should also be tagged `v1.2.0`.

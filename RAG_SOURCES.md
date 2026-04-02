@@ -1,11 +1,6 @@
 # RAG Sources
 
-This is the specific documentation page to share when someone asks:
-
-- what RAG sources are
-- how to create a source
-- which source types can be ingested
-- what content the bot can learn from
+RAG sources are the pieces of content your bot is allowed to learn from. This page covers what counts as a source, which input types are supported, and how to add content that improves retrieval instead of creating noise.
 
 ## Quick Summary
 
