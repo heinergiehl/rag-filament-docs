@@ -1,6 +1,6 @@
 # Filament RAG Plugin
 
-Filament RAG is a production-focused Filament plugin for teams that want to build, manage, and embed grounded chatbots without building the full RAG admin layer from scratch.
+Filament RAG is a Filament plugin for teams that want to build, manage, and embed grounded chatbots without building the full admin layer from scratch.
 
 It is designed for real product use inside Laravel + Filament: multiple bots, source ingestion, retrieval tuning, embeddable chat widgets, conversation history, and production controls in one place.
 
@@ -19,7 +19,7 @@ Use the landing page for the public product and docs experience. Use the admin l
 
 ## What Filament RAG Does
 
-Filament RAG adds a complete chatbot control plane to a Laravel + Filament app:
+Filament RAG adds a complete chatbot management layer to a Laravel + Filament app:
 
 - create and manage multiple bots from inside Filament
 - ingest text, file, and URL knowledge sources
@@ -43,7 +43,7 @@ This is a strong fit when you want to ship support assistants, documentation bot
 - text, file, and URL sources
 - support for markdown, HTML, PDFs, and public web content
 - queue-driven ingestion with retries and re-ingest workflows
-- token-aware chunk sizing and better document structure retention
+- smarter chunk sizing and better document structure retention
 
 ### Retrieval And Answers
 
@@ -64,7 +64,7 @@ This is a strong fit when you want to ship support assistants, documentation bot
 - built-in readiness checks through `php artisan filament-rag:doctor`
 - queue and ingestion visibility in Filament
 - privacy export and deletion endpoints
-- SSRF-safe URL ingestion defaults and production hardening support
+- safe URL ingestion defaults and production hardening support
 
 ## Quick First Workflow
 
@@ -116,7 +116,7 @@ Then run the health check:
 php artisan filament-rag:doctor
 ```
 
-For the complete setup flow, env examples, and first-run troubleshooting, see:
+For the complete setup flow, environment examples, and first-run troubleshooting, see:
 
 - Quickstart: https://filament-rag.heinerdevelops.tech/docs/quickstart
 
