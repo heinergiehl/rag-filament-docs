@@ -3,8 +3,8 @@
 ## Contact
 
 - Primary support channel: `webdevislife2021@gmail.com`
-- Documentation: `https://github.com/heinergiehl/rag-filament-docs`
-- Issue tracker: GitHub Issues (for reproducible bug reports)
+- Documentation: `https://filament-rag.heinerdevelops.tech/docs`
+- Issue tracker: GitHub Issues for reproducible bug reports
 
 ## Scope
 

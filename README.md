@@ -2,42 +2,49 @@
 
 Versioned documentation for the `heiner/filament-rag` plugin.
 
-This repo is meant to make it easy for both humans and the demo chatbot to point to the exact page for an important concept instead of sending people to a vague homepage.
+This repository is organized so buyers, implementers, and support users can jump straight to the page they need instead of digging through one long README.
 
 > [!NOTE]
-> For the Filament marketplace `docs_url`, use [`FILAMENT_PLUGIN_PAGE.md`](./FILAMENT_PLUGIN_PAGE.md), not this README. Filament renders one raw Markdown file and does not resolve repository-relative links the way GitHub does.
+> For the Filament marketplace `docs_url`, use [`FILAMENT_PLUGIN_PAGE.md`](./FILAMENT_PLUGIN_PAGE.md), not this README. Filament renders a single raw Markdown file and does not resolve repository-relative links like GitHub does.
 
 ## Start Here
 
-- [Live demo](#live-demo)
+If you are evaluating the plugin, read these in order:
+
+1. [Product Overview](./PRODUCT_OVERVIEW.md)
+2. [Core Concepts](./CORE_CONCEPTS.md)
+3. [Quickstart](./QUICKSTART.md)
+
+If you need one page with all public links, use [Reference Links](./REFERENCE_LINKS.md).
+
+## Public Links
+
+- [Documentation home](https://filament-rag.heinerdevelops.tech/docs)
+- [Live demo](https://filament-rag.heinerdevelops.tech/)
+- [Admin login](https://filament-rag.heinerdevelops.tech/admin/login)
+
+## Documentation Map
+
+### Evaluate The Plugin
+
 - [Product Overview](./PRODUCT_OVERVIEW.md)
 - [Core Concepts](./CORE_CONCEPTS.md)
-- [Quickstart](./QUICKSTART.md)
 - [Reference Links](./REFERENCE_LINKS.md)
 
-## Live Demo
+### Install And Launch
 
-- [Public landing](https://rag-filament.heinerdevelops.tech/)
-- [Admin login](https://rag-filament.heinerdevelops.tech/admin/login)
+- [Quickstart](./QUICKSTART.md)
+- [Operations](./OPERATIONS.md)
+- [Security and Privacy](./SECURITY_AND_PRIVACY.md)
 
-## Docs By Topic
+### Learn The Product Model
 
-### Core Product And Concepts
-
-- [Product Overview](./PRODUCT_OVERVIEW.md)
-- [Core Concepts](./CORE_CONCEPTS.md)
 - [Bots](./BOTS.md)
 - [RAG Sources](./RAG_SOURCES.md)
 - [Ingestion and Retrieval](./INGESTION_AND_RETRIEVAL.md)
 - [Chat Widget](./CHAT_WIDGET.md)
 - [Context Areas](./CONTEXT_AREAS.md)
 - [Conversations and Messages](./CONVERSATIONS_AND_MESSAGES.md)
-
-### Setup And Operations
-
-- [Quickstart](./QUICKSTART.md)
-- [Operations](./OPERATIONS.md)
-- [Security and Privacy](./SECURITY_AND_PRIVACY.md)
 
 ### Policies And Support
 
@@ -52,20 +59,17 @@ This repo is meant to make it easy for both humans and the demo chatbot to point
 - [Release Notes v1.0.1](./RELEASE_NOTES_v1.0.1.md)
 - [Release Notes v1.0.0](./RELEASE_NOTES_v1.0.0.md)
 
-## Exact Links You Will Want Most Often
+## Common Questions
 
-If someone asks one narrow question, these are the pages to send them to:
-
-- "What does this plugin add?" -> [Product Overview](./PRODUCT_OVERVIEW.md)
-- "What is a bot?" -> [Bots](./BOTS.md)
-- "How do I create or customize a chatbot?" -> [Bots](./BOTS.md)
-- "What are RAG sources?" -> [RAG Sources](./RAG_SOURCES.md)
-- "How do I create a RAG source?" -> [RAG Sources](./RAG_SOURCES.md)
-- "How does ingestion work?" -> [Ingestion and Retrieval](./INGESTION_AND_RETRIEVAL.md)
-- "How do I embed the widget?" -> [Chat Widget](./CHAT_WIDGET.md)
-- "What are context areas?" -> [Context Areas](./CONTEXT_AREAS.md)
-- "How are conversations stored?" -> [Conversations and Messages](./CONVERSATIONS_AND_MESSAGES.md)
+- What does the plugin add? → [Product Overview](./PRODUCT_OVERVIEW.md)
+- How do I install it? → [Quickstart](./QUICKSTART.md)
+- How do I configure a bot? → [Bots](./BOTS.md)
+- How do I add knowledge sources? → [RAG Sources](./RAG_SOURCES.md)
+- How does retrieval work? → [Ingestion and Retrieval](./INGESTION_AND_RETRIEVAL.md)
+- How do I embed the chat UI? → [Chat Widget](./CHAT_WIDGET.md)
+- How do access areas work? → [Context Areas](./CONTEXT_AREAS.md)
+- How are conversations stored? → [Conversations and Messages](./CONVERSATIONS_AND_MESSAGES.md)
 
 ## Versioning
 
-Docs should follow the same versioning as the plugin. If the plugin release is `1.1.0`, the matching docs snapshot should also be tagged `v1.1.0`.
+Docs should track plugin releases. If the plugin release is `1.1.0`, the matching docs snapshot should also be tagged `v1.1.0`.

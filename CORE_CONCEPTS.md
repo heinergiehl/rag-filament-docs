@@ -1,19 +1,19 @@
 # Core Concepts
 
-This page explains the main building blocks of Filament RAG and links to the detailed docs for each one.
+This page explains the main building blocks of Filament RAG and shows how they connect.
 
-## The Short Version
+## The Core Flow
 
 Filament RAG gives you a Filament-native control plane for running RAG chatbots inside a Laravel app.
 
-The core flow is:
+The normal lifecycle looks like this:
 
 1. Create a **bot**
 2. Add **RAG sources**
-3. Let the system **ingest** those sources
-4. Retrieve relevant **chunks** at question time
+3. Let the system **ingest** those sources into searchable chunks
+4. Retrieve the most relevant **chunks** at question time
 5. Answer through the **chat widget** or your own frontend
-6. Review **conversations** and operating health inside Filament
+6. Review **conversations**, quality, and operating health inside Filament
 
 ## Concept Map
 
@@ -44,9 +44,9 @@ The bot is the central runtime definition. It decides:
 
 ### Sources, Documents, and Chunks
 
-A source is the input. During ingestion, that source becomes a normalized document, and that document is split into chunks. Those chunks are what retrieval actually searches.
+A source is the input. During ingestion, that source becomes a normalized document, and that document is split into chunks. Retrieval searches those chunks, not entire files or pages.
 
-That means the bot does not search entire files or pages at once. It searches smaller grounded pieces of content.
+That matters because chunk quality directly affects answer quality, citations, and relevance.
 
 ### Retrieval and Answers
 
@@ -54,17 +54,27 @@ When a user asks a question:
 
 1. the system embeds the query
 2. finds relevant chunks
-3. formats those chunks as context
+3. filters and formats those chunks as context
 4. sends that context to the model
 5. returns an answer, often with citations
 
 ### Conversations and Widget Runtime
 
-The widget is only the interface layer. The bot, sources, retrieval, and conversations live in your Laravel app and are managed from Filament.
+The widget is only the interface layer. The bot, sources, retrieval, access rules, and conversations live in your Laravel app and are managed from Filament.
+
+## A Good Mental Model
+
+- The **bot** defines behavior.
+- The **sources** define knowledge.
+- **Ingestion** prepares that knowledge.
+- **Retrieval** picks the right context.
+- The **widget** delivers the user experience.
+- **Conversations** give you history and auditability.
 
 ## Read These Next
 
 - [Product Overview](/docs/product-overview)
+- [Quickstart](/docs/quickstart)
 - [Bots](/docs/bots)
 - [RAG Sources](/docs/rag-sources)
 - [Ingestion and Retrieval](/docs/ingestion-and-retrieval)

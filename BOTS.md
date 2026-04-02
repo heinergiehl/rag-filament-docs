@@ -7,6 +7,12 @@ This is the specific documentation page to share when someone asks:
 - what can be customized per bot
 - how public and internal bots differ
 
+## Quick Summary
+
+A bot is one complete assistant definition: prompt, model, retrieval behavior, access rules, widget presentation, and linked sources.
+
+If two assistants should answer differently, use different sources, or serve different audiences, they should usually be different bots.
+
 ## What A Bot Is
 
 A bot is one assistant configuration inside Filament RAG.
@@ -33,6 +39,8 @@ Each bot owns its own:
 - context areas
 - widget branding and prompts
 - linked sources
+
+This separation is one of the biggest strengths of Filament RAG. It lets one app run multiple focused assistants instead of one overloaded bot that tries to do everything.
 
 In practice, this means you can create:
 
@@ -88,6 +96,13 @@ Use it for:
 
 Do not use it as a substitute for real source content. The prompt guides behavior; the sources provide the grounded knowledge.
 
+Good prompt goals:
+
+- define role and audience clearly
+- explain how to behave when sources are weak or missing
+- control tone and answer format
+- tell the bot when to stay narrow instead of guessing
+
 ### Provider And Model
 
 You can choose which provider and model a bot uses for chat.
@@ -108,6 +123,12 @@ The most important retrieval settings are:
 - context budget: how much retrieved content can be passed into the answer prompt
 
 These settings strongly influence whether the bot feels too vague, too strict, or well-grounded.
+
+Recommended first defaults:
+
+- start conservative
+- test with real user questions
+- change one retrieval setting at a time
 
 ### Allowed Domains
 
@@ -175,6 +196,50 @@ Create a separate bot when you need a different:
 - access policy
 
 Do not create separate bots only to change one small answer. Start with the bot prompt and source set first.
+
+## Example Bot Setups
+
+### Public Docs Bot
+
+Good for:
+
+- feature questions
+- setup guidance
+- docs navigation
+
+Recommended approach:
+
+- `public` context area
+- only public docs sources
+- clear widget subtitle like `Ask about setup, features, and troubleshooting`
+
+### Member Help Bot
+
+Good for:
+
+- account help
+- onboarding flows
+- customer-only guidance
+
+Recommended approach:
+
+- `member` context area
+- authenticated session context enabled
+- customer-facing docs and private help content only
+
+### Admin Ops Bot
+
+Good for:
+
+- runbooks
+- incident response notes
+- setup and maintenance instructions
+
+Recommended approach:
+
+- `admin` context area
+- strict domain and access rules
+- internal-only sources
 
 ## Typical Bot Patterns
 

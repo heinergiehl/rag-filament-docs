@@ -7,6 +7,10 @@ This is the specific documentation page to share when someone asks:
 - which source types can be ingested
 - what content the bot can learn from
 
+## Quick Summary
+
+Sources are the knowledge inputs for a bot. Better sources produce better retrieval, better citations, and better answers.
+
 ## What A RAG Source Is
 
 A RAG source is a piece of content the bot is allowed to learn from.
@@ -28,6 +32,8 @@ Filament RAG supports three source types:
 - **Text**: paste content directly into the panel
 - **File**: upload a supported document such as markdown, text, HTML, JSON, CSV, or a text-based PDF
 - **URL**: fetch a public web page and extract readable content
+
+Recent versions also improved HTML and PDF ingestion, so richer documentation sources now perform better than before.
 
 ## When To Use Each Source Type
 
@@ -129,6 +135,16 @@ Strong examples:
 - support policies
 - onboarding instructions
 
+## Source Quality Checklist
+
+Use this quick filter before ingesting something:
+
+- Is it current?
+- Is it written for the audience this bot serves?
+- Does it contain actionable facts instead of vague marketing language?
+- Is it structured with headings or clear sections?
+- Would a human support agent trust it as a source of truth?
+
 ## What You Should Avoid Ingesting
 
 Weak sources are:
@@ -140,6 +156,13 @@ Weak sources are:
 - content written for the wrong audience
 
 If a page is mostly decorative or repetitive, it usually adds noise to retrieval.
+
+Common low-value sources:
+
+- short landing-page blurbs with little product detail
+- heavily duplicated copies of the same docs
+- giant mixed-content exports with weak structure
+- incomplete internal notes that were never meant to be user-facing
 
 ## Source Naming And Organization
 
@@ -185,6 +208,16 @@ Re-ingest when:
 - retrieval quality is weak
 - embedding or chunking settings changed
 - you want new citations or updated canonical links
+
+## Good First Source Set
+
+For a first production bot, a strong starter set usually includes:
+
+- product overview
+- quickstart or setup guide
+- troubleshooting page
+- FAQ or support policy
+- one or two highly specific feature pages
 
 ## Best Practices
 
