@@ -30,6 +30,19 @@ Filament RAG supports three source types:
 
 Recent versions also improved HTML and PDF ingestion, so richer documentation sources now perform better than before.
 
+### Database And API Data
+
+Database tables and API responses are useful RAG inputs, but they are not a generic no-code connector in the panel.
+
+For Laravel applications, the practical approach is to sync that data into text sources or register a custom content extractor that turns records/API responses into readable text before ingestion. The normal pipeline then still applies:
+
+1. fetch records or API payloads
+2. convert them to text
+3. chunk and embed the text
+4. store vectors in pgvector, Chroma, or another configured backend
+
+This keeps project-specific concerns such as authentication, pagination, incremental updates, deleted records, and tenant scoping in your application code instead of hiding them behind an unsafe generic connector.
+
 ## When To Use Each Source Type
 
 ### Text

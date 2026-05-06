@@ -18,6 +18,15 @@ Depending on your implementation, your application may also associate chat sessi
 - Friendly provider errors without stacktrace leaks in widget output
 - URL ingestion safety checks that block localhost and private networks by default
 
+## Domain And Offline Notes
+
+The plugin is not locked to a purchased domain. It runs inside your Laravel application, so an IP address or internal hostname can work when your Laravel app, widget URL, bot allowed domains, AI provider, and vector backend are reachable from that environment.
+
+"Offline" can mean two different things:
+
+- no public domain or private-network deployment: supported with the right app and widget configuration
+- no internet access at all: requires local chat, embedding, and vector services; cloud AI providers still require outbound internet access
+
 ## Recommended Privacy Policy Clauses
 
 Your privacy policy should explain:

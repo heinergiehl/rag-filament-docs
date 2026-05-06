@@ -1,13 +1,14 @@
 # Quickstart
 
-This guide is current for the Filament RAG 1.2.x release line. It is written for buyers who want to install the plugin, create one working bot, ingest real content, and embed the chat widget without digging through internal project notes.
+This guide is current for the Filament RAG 1.3.x release line. It is written for buyers who want to install the plugin, create one working bot, ingest real content, and embed the chat widget without digging through internal project notes.
 
 ## 1. Requirements
 
 - PHP 8.4+
 - Laravel 12+
 - Filament 5.2+
-- One provider API key such as `GEMINI_API_KEY`, `OPENAI_API_KEY`, `ANTHROPIC_API_KEY`, or `XAI_API_KEY`
+- One chat provider API key such as `GEMINI_API_KEY`, `OPENAI_API_KEY`, `ANTHROPIC_API_KEY`, `XAI_API_KEY`, `OPENROUTER_API_KEY`, or `DEEPSEEK_API_KEY`
+- One embedding-capable provider key, usually Gemini or OpenAI, for RAG indexing and retrieval
 - PostgreSQL with `pgvector` for the recommended setup, or Chroma as an optional backend
 
 ## 2. Install the Package
@@ -64,6 +65,19 @@ RAG_CONTEXT_ALLOWED_AREAS=public,member,admin
 RAG_WIDGET_SIGNING_ENABLED=true
 RAG_WIDGET_SIGNING_KEY=replace-with-a-long-random-secret
 GEMINI_API_KEY=your-key-here
+```
+
+OpenRouter and direct DeepSeek can be used for chat while embeddings stay on Gemini or OpenAI:
+
+```env
+RAG_CHAT_PROVIDER=openrouter
+RAG_CHAT_MODEL=qwen/qwen3-30b-a3b
+OPENROUTER_API_KEY=your-key-here
+
+# or direct DeepSeek
+RAG_CHAT_PROVIDER=deepseek
+RAG_CHAT_MODEL=deepseek-chat
+DEEPSEEK_API_KEY=your-key-here
 ```
 
 If your main app database is MySQL or SQLite, that is fine. Point Filament RAG at a separate PostgreSQL connection for vector storage.
@@ -126,6 +140,8 @@ Fix anything marked `FAIL` before you start ingesting real content.
 
 Once ingestion finishes, the bot can retrieve grounded context from that source.
 
+Database tables and API responses are not a generic no-code source type in the panel. For Laravel projects, sync that data into text sources or register a custom content extractor when you need database/API-backed ingestion.
+
 ## 9. Test the Bot in Filament
 
 On the bot edit page, use the built-in testing actions:
@@ -151,6 +167,8 @@ Example:
 ```
 
 If widget signing is enabled, keep `data-token` in place. If you embed the widget on multiple domains, make sure each host is allowed on the bot.
+
+The plugin can run from an IP address or private hostname. If there is no internet access at all, your AI chat, embedding, and vector services must also be reachable locally.
 
 ## Common Setup Issues
 

@@ -54,6 +54,8 @@ Use the NPM package when you want tighter control in React, Vue, or another SPA 
 4. Keep signing enabled for production embeds.
 5. Test the widget from the exact production host before launch.
 
+The same bot can be embedded across multiple websites. Add each host, or a wildcard such as `*.example.com`, to the bot's allowed domains.
+
 ## What End Users Actually Experience
 
 The widget experience is shaped by three layers:

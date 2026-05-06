@@ -109,6 +109,10 @@ This lets you optimize different bots for:
 - cost
 - provider-specific capabilities
 
+Supported chat providers include Gemini, OpenAI, Anthropic, xAI, OpenRouter, and DeepSeek. OpenRouter is useful when you want hosted access to model families such as Qwen or DeepSeek through OpenRouter model IDs. Direct DeepSeek is useful when you want to call DeepSeek's own API.
+
+RAG retrieval still needs an embedding provider. Keep embeddings on an embedding-capable provider such as Gemini or OpenAI unless your project has added a tested local/custom embedding setup.
+
 ### Retrieval Settings
 
 The most important retrieval settings are:

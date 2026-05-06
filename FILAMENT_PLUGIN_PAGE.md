@@ -23,6 +23,7 @@ Filament RAG adds a complete chatbot management layer to a Laravel + Filament ap
 
 - create and manage multiple bots from inside Filament
 - ingest text, file, and URL knowledge sources
+- use Gemini, OpenAI, Anthropic, xAI, OpenRouter, or DeepSeek for chat
 - tune retrieval settings per bot
 - return source-backed answers with citations
 - embed chat widgets on public or authenticated surfaces
@@ -42,6 +43,7 @@ This is a strong fit when you want to ship support assistants, documentation bot
 
 - text, file, and URL sources
 - support for markdown, HTML, PDFs, and public web content
+- custom Laravel ingestion paths for database/API-backed sources
 - queue-driven ingestion with retries and re-ingest workflows
 - smarter chunk sizing and better document structure retention
 
@@ -82,7 +84,8 @@ This is a strong fit when you want to ship support assistants, documentation bot
 - Laravel 12+
 - Filament 5+
 - PostgreSQL with `pgvector` recommended, or Chroma as an alternative backend
-- One supported provider API key such as Gemini, OpenAI, Anthropic, or xAI
+- One supported chat provider API key such as Gemini, OpenAI, Anthropic, xAI, OpenRouter, or DeepSeek
+- One embedding-capable provider key, usually Gemini or OpenAI, for RAG indexing and retrieval
 
 ## Installation
 

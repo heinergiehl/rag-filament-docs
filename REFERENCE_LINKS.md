@@ -25,6 +25,7 @@ Use this page to find the main product, documentation, support, and repository l
 - [Security and Privacy](/docs/security-and-privacy)
 - [Support Policy](/docs/support-policy)
 - [Refund and License](/docs/refund-and-license)
+- [Release Notes v1.3.0](https://github.com/heinergiehl/rag-filament-docs/blob/main/RELEASE_NOTES_v1.3.0.md)
 
 ## Exact Links By Question
 

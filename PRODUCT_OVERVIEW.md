@@ -75,6 +75,7 @@ That lets you focus on your product, data, and user experience instead of rebuil
 ### Knowledge Ingestion
 
 - Text, file, and URL sources
+- Custom Laravel ingestion paths for database/API-backed content
 - Queue-based ingestion and retry handling
 - Chunking, embedding, and vector persistence
 - Re-ingest and rebuild tooling when models or settings change
@@ -83,6 +84,7 @@ That lets you focus on your product, data, and user experience instead of rebuil
 
 - Configurable retrieval depth and similarity filtering
 - Source-backed answers with citations
+- Chat providers including Gemini, OpenAI, Anthropic, xAI, OpenRouter, and DeepSeek
 - Streaming responses for widget UX
 - Markdown or plain-text answer formats
 
