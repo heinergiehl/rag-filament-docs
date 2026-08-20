@@ -23,6 +23,8 @@ For each source, Filament RAG:
 
 If all steps succeed, the source moves to `completed`.
 
+Replacement ingestion is staged as a separate generation. It becomes searchable only after every document, chunk, embedding, and vector write succeeds. Until then, the last successful generation remains active.
+
 The key idea is simple: retrieval quality starts with source quality and chunk quality, not only model choice.
 
 ## Retrieval

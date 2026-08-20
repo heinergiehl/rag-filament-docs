@@ -35,6 +35,8 @@ php artisan queue:work database --queue=rag-ingestion
 
 `pending` sources are expected while waiting for retries after provider rate limits. If pending items do not move for several minutes, verify worker health, queue configuration, and provider quotas.
 
+Do not use the `sync` queue in production. The production Doctor treats it as a release-blocking failure because web requests cannot provide durable background ingestion or retry behavior.
+
 ## Dev Bootstrap
 
 For local onboarding, run:
@@ -58,6 +60,8 @@ php artisan filament-rag:doctor
 ```
 
 Treat `FAIL` as a release blocker.
+
+The production Doctor also fails when `RAG_ALLOW_PRIVATE_NETWORK_URLS=true`. That exception disables the default private/local URL protection and is intended only for controlled local development.
 
 ## Signed Widget Tokens
 
@@ -100,6 +104,7 @@ Track:
 ## Recovery Playbook
 
 - If ingestion fails: inspect `rag_sources.meta.error`, then retry ingestion from the Sources table.
+- A failed refresh keeps the last successful document generation active. Correct the cause and retry; do not delete the working source merely to clear the status.
 - If ingestion is pending: inspect `rag_sources.meta.retry_after` and `rag_sources.meta.retry_delay_seconds`.
 - If you changed vector backend or model settings: use `Re-Ingest Bot Sources` on the bot page or `Re-Ingest All Sources` from the sources list.
 - If chat is rate-limited: reduce traffic burst and add retry backoff in clients.
