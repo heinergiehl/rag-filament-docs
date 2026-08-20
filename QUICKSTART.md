@@ -1,12 +1,12 @@
 # Quickstart
 
-This guide is current for the Filament RAG 1.3.x release line. It is written for buyers who want to install the plugin, create one working bot, ingest real content, and embed the chat widget without digging through internal project notes.
+This guide is current for the Filament RAG 1.4.x release line. It is written for buyers who want to install the plugin, create one working bot, ingest real content, and embed the chat widget without digging through internal project notes.
 
 ## 1. Requirements
 
 - PHP 8.4+
-- Laravel 12+
-- Filament 5.2+
+- Laravel 12.61.1+
+- Filament 5.6.5+
 - One chat provider API key such as `GEMINI_API_KEY`, `OPENAI_API_KEY`, `ANTHROPIC_API_KEY`, `XAI_API_KEY`, `OPENROUTER_API_KEY`, or `DEEPSEEK_API_KEY`
 - One embedding-capable provider key, usually Gemini or OpenAI, for RAG indexing and retrieval
 - PostgreSQL with `pgvector` for the recommended setup, or Chroma as an optional backend
@@ -25,7 +25,7 @@ If you are starting from a fresh Laravel app, install Filament before adding Fil
 ```bash
 composer create-project laravel/laravel my-app
 cd my-app
-composer require filament/filament "^5.2"
+composer require filament/filament "^5.6.5"
 php artisan filament:install --panels --no-interaction
 composer require heiner/filament-rag
 php artisan vendor:publish --tag=filament-rag-config
@@ -116,6 +116,8 @@ php artisan filament-rag:doctor
 ```
 
 Fix anything marked `FAIL` before you start ingesting real content.
+
+In production, the Doctor requires a real queue connection instead of `sync` and rejects `RAG_ALLOW_PRIVATE_NETWORK_URLS=true`. Keep private-network URL access limited to trusted local development.
 
 ## 7. Create Your First Bot
 
