@@ -48,4 +48,3 @@ Version 1.4.1 contains no new database migration. Existing bots, sources, docume
 - Laravel 12.61.1+ or 13.x
 - Filament 5.6.5+; Composer selects 5.7+ on Laravel 13
 - Laravel AI 0.1.5+, 0.6.7+, or 0.7.x; Composer selects 0.7+ on Laravel 13
-
