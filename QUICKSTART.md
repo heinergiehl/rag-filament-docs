@@ -5,8 +5,8 @@ This guide is current for the Filament RAG 1.4.x release line. It is written for
 ## 1. Requirements
 
 - PHP 8.4+
-- Laravel 12.61.1+
-- Filament 5.6.5+
+- Laravel 12.61.1+ or Laravel 13.x
+- Filament 5.6.5+; Laravel 13 resolves Filament 5.7+
 - One chat provider API key such as `GEMINI_API_KEY`, `OPENAI_API_KEY`, `ANTHROPIC_API_KEY`, `XAI_API_KEY`, `OPENROUTER_API_KEY`, or `DEEPSEEK_API_KEY`
 - One embedding-capable provider key, usually Gemini or OpenAI, for RAG indexing and retrieval
 - PostgreSQL with `pgvector` for the recommended setup, or Chroma as an optional backend
@@ -23,9 +23,9 @@ php artisan vendor:publish --tag=filament-rag-config
 If you are starting from a fresh Laravel app, install Filament before adding Filament RAG:
 
 ```bash
-composer create-project laravel/laravel my-app
+composer create-project laravel/laravel my-app "13.*"
 cd my-app
-composer require filament/filament "^5.6.5"
+composer require filament/filament:"5.*"
 php artisan filament:install --panels --no-interaction
 composer require heiner/filament-rag
 php artisan vendor:publish --tag=filament-rag-config
