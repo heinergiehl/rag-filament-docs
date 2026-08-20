@@ -81,8 +81,8 @@ This is a strong fit when you want to ship support assistants, documentation bot
 ## Requirements
 
 - PHP 8.4+
-- Laravel 12+
-- Filament 5+
+- Laravel 12.61.1+ or Laravel 13.x
+- Filament 5.6.5+; Laravel 13 resolves Filament 5.7+
 - PostgreSQL with `pgvector` recommended, or Chroma as an alternative backend
 - One supported chat provider API key such as Gemini, OpenAI, Anthropic, xAI, OpenRouter, or DeepSeek
 - One embedding-capable provider key, usually Gemini or OpenAI, for RAG indexing and retrieval
